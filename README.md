@@ -4,6 +4,8 @@
 
 The `@functionless/language-service` package configures a plugin for the TypeScript language service plugin that adds real-time errors to the IDE for [Functionless](https://github.com/functionless/functionless)'s semantic errors.
 
+![Step Function Arithmetic Error](./img/ide-language-service-preview.png)
+
 To configure, first install the module as a devDependency.
 
 ```shell
