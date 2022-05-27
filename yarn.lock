@@ -2444,10 +2444,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-functionless@^0.6.18:
-  version "0.6.18"
-  resolved "https://registry.yarnpkg.com/functionless/-/functionless-0.6.18.tgz#9bfa78bed7952f2eb6a024f233fcad54305c5170"
-  integrity sha512-n5UxznE93eMv3YfgJ3FENZHt/sntF468FR6RZxaGkcvjCr84yuAEfGZTdC93WJVlHM83d/8gN9RqefmVKZGnuw==
+functionless@0.6.20:
+  version "0.6.20"
+  resolved "https://registry.yarnpkg.com/functionless/-/functionless-0.6.20.tgz#ce3a17ea3911089287bd029127f17882e7e041e3"
+  integrity sha512-bYbkUSNPCISLg2tcm3kST0v8Lw2DinxyhXNPyYim0rrww7Bps5bjFQow+F21KWyRgIwKu+hhHphDjzirNpm69Q==
   dependencies:
     fs-extra "^10.1.0"
     minimatch "^5.0.1"

@@ -3,7 +3,8 @@ const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: "main",
   name: "@functionless/language-service",
 
-  deps: ["functionless"],
+  peerDeps: ["functionless@^0.6.20"],
+  devDeps: ["functionless"],
   eslintOptions: {
     prettier: true,
     lintProjenRcFile: false,
