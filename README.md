@@ -10,6 +10,7 @@ To configure, first install the module as a devDependency.
 # if using NPM
 npm install --save-dev @functionless/language-service
 
+# if using yarn
 yarn add -D @functionless/language-service
 ```
 
