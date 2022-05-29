@@ -25,21 +25,19 @@ function init(modules: { typescript: typeof tsserver }): any {
       proxy[k] = (...args: Array<{}>) => x.apply(info.languageService, args);
     }
 
-    const program = info.languageService.getProgram();
-    if (program === undefined) {
-      return proxy;
-    }
-
-    const checker = makeFunctionlessChecker(program.getTypeChecker());
-
     proxy.getSemanticDiagnostics = (fileName): ts.Diagnostic[] => {
       const errors = info.languageService.getSemanticDiagnostics(fileName);
+      const program = info.languageService.getProgram();
 
-      const sf = program.getSourceFile(fileName);
+      if (program !== undefined) {
+        const checker = makeFunctionlessChecker(program.getTypeChecker());
+        const sf = program.getSourceFile(fileName);
 
-      if (sf) {
-        const customErrors = validate(ts as any, checker, sf);
-        return [...errors, ...customErrors];
+        if (sf) {
+          const customErrors = validate(ts as any, checker, sf, logger);
+          logger.info(`Functionless found ${customErrors.length} errors`);
+          return [...errors, ...customErrors];
+        }
       }
 
       return errors;
