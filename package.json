@@ -1,5 +1,6 @@
 {
   "name": "@functionless/language-service",
+  "description": "A TypeScript Language Service Plugin that shows Functionless errors in the IDE",
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
